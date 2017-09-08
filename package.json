@@ -1,0 +1,22 @@
+{
+  "name": "mediaelement",
+  "title": "Media Player with MediaElement.js",
+  "license": "MIT",
+  "version": "0.1.0",
+  "author": "Els den Engelse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swanhild92/HTML-Media-Player-with-MediaElement.js.git"
+  },
+  "private": false,
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-header": "^1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1"
+  }
+}

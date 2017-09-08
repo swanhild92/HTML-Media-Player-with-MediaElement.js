@@ -21,7 +21,7 @@ gulp.task('sass', function() {
     return gulp.src('styles/scss/styles.scss')
         .pipe(autoprefixer())
         .pipe(sass())
-        .pipe(gulp.dest('styles/css/'))
+        .pipe(gulp.dest('styles/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -46,7 +46,7 @@ gulp.task('minify-js', function() {
         .pipe(uglify())
         .pipe(banner(comment, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('scripts/'))
+        .pipe(gulp.dest('scripts'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -72,10 +72,10 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
-    gulp.watch('assets/scss/*.scss', ['sass']);
-    gulp.watch('assets/css/*.css', ['minify-css']);
-    gulp.watch('assets/js/*.js', ['minify-js']);
+    gulp.watch('styles/scss/*.scss', ['sass']);
+    gulp.watch('styles/css/*.css', ['minify-css']);
+    gulp.watch('scripts/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
-    gulp.watch('assets/js/**/*.js', browserSync.reload);
+    gulp.watch('scripts/**/*.js', browserSync.reload);
 });

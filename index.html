@@ -2,35 +2,43 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Els den Engelse">
     <title>Els' Media Players</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mediaelementplayer.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mejs-controls.svg">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back.min.css" rel="stylesheet">
-    <link href="styles/css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back.min.css"
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/chromecast/chromecast.min.css"
+          rel="stylesheet">
+    <link href="styles/css/flexr.min.css">
+    <link href="styles/css/styles.min.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>HTML Video and Audio</h1>
+<h1>HTML Video and Audio with MediaElement.js</h1>
 
 <div class="wrapper">
 
-    <h2>Video Example</h2>
-
+    <h2>Bunny Buck</h2>
     <div class="videoWrapper">
-        <video width="852" height="480">
-            <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
-            <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
+        <video width="852" height="480"
+               data-cast-title="Test video cast"
+               data-cast-description="Is this test working with my chromecast?"
+               poster="media/poster/pexels-konijn.jpeg">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4"
+                    type="video/mp4">
+            <!--<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg"-->
+                    <!--type="video/ogg">-->
         </video>
     </div>
 
-    <h2>Audio Example</h2>
-
+    <h2>French jazzy stock sound</h2>
     <div class="audioWrapper">
         <audio>
-            <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3">
+            <source src="media/audio/bensound-jazzyfrenchy.mp3" type="audio/mp3">
         </audio>
     </div>
 </div>
@@ -39,7 +47,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mediaelement-and-player.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back-i18n.js"></script>
-<script src="scripts/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/chromecast/chromecast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/chromecast/chromecast-i18n.js"></script>
+<script src="scripts/main.min.js"></script>
 
 </body>
 </html>

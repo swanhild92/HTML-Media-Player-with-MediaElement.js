@@ -22,9 +22,17 @@ h1, h2 {
     text-align: center;
 }
 
-video, audio, .mejs__container {
+.videoWrapper, .audioWrapper {
     margin: 0 auto;
     display: block;
+}
+
+.videoWrapper {
+    width: 852px;
+}
+
+.audioWrapper {
+    width: 400px;
 }
 
 .mejs__container {

@@ -1,14 +1,15 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var banner = require('gulp-banner');
 var browserSync = require('browser-sync').create();
-var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
+var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
 // Set the banner content
-var banner = ['/*!\n',
+var comment = ['/*!\n',
     ' * Els den Engelse - <%= pkg.title %> v<%= pkg.version %>\n',
     ' * Copyright ' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' */\n',
@@ -18,9 +19,9 @@ var banner = ['/*!\n',
 // Compile SCSS files from /scss into /css
 gulp.task('sass', function() {
     return gulp.src('styles/scss/styles.scss')
+        .pipe(autoprefixer())
         .pipe(sass())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('assets/css'))
+        .pipe(gulp.dest('styles/css/'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -29,9 +30,11 @@ gulp.task('sass', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
     return gulp.src('styles/css/styles.css')
+        .pipe(autoprefixer())
+        .pipe(banner(comment, { pkg: pkg }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('assets/css'))
+        .pipe(gulp.dest('styles/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -41,9 +44,9 @@ gulp.task('minify-css', ['sass'], function() {
 gulp.task('minify-js', function() {
     return gulp.src('scripts/main.js')
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(banner(comment, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('assets/js'))
+        .pipe(gulp.dest('scripts/'))
         .pipe(browserSync.reload({
             stream: true
         }))

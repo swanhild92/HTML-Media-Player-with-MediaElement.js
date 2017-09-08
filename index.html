@@ -7,7 +7,8 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mediaelementplayer.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-    <!--https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mejs-controls.svg-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mejs-controls.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back.min.css" rel="stylesheet">
     <link href="styles/css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -19,7 +20,7 @@
     <h2>Video Example</h2>
 
     <div class="videoWrapper">
-        <video width="852" height="480" class="mejs__player">
+        <video width="852" height="480">
             <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
             <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
         </video>
@@ -28,7 +29,7 @@
     <h2>Audio Example</h2>
 
     <div class="audioWrapper">
-        <audio class="mejs__player">
+        <audio>
             <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3">
         </audio>
     </div>
@@ -36,6 +37,9 @@
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.5/mediaelement-and-player.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.4.0/skip-back/skip-back-i18n.js"></script>
+<script src="scripts/main.js"></script>
 
 </body>
 </html>

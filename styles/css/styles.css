@@ -23,13 +23,26 @@ h1, h2 {
   display: block; }
 
 .videoWrapper {
-  width: 852px; }
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%; }
+  .videoWrapper video {
+    width: 100%;
+    height: 100%; }
 
 .audioWrapper {
   width: 400px; }
 
 .mejs__container {
   margin: 0 auto; }
+
+.mejs-container {
+  width: 100% !important;
+  height: 100% !important; }
+
+.mejs-layers .mejs-layer {
+  width: 100% !important;
+  height: 100% !important; }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**

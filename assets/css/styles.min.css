@@ -1,4 +1,0 @@
-/*!
- * Els den Engelse - Media Player with MediaElement.js v0.1.0
- * Copyright 2017 Els den Engelse
- */

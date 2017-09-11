@@ -4,9 +4,13 @@
 (function($) {
     "use strict";
 
-    $('video, audio').mediaelementplayer({
-        features: ['playpause', 'volume', 'current', 'progress', 'duration', 'skipback', 'tracks', 'markers', 'contextmenu', 'chromecast', 'fullscreen'],
+    $('video').mediaelementplayer({
+        features: ['playpause', 'volume', 'current', 'progress', 'duration', 'skipback', 'tracks', 'markers', 'chromecast', 'fullscreen'],
         skipBackInterval: 10
+    });
+
+    $('audio').mediaelementplayer({
+        features: ['playpause', 'current', 'progress', 'duration', 'tracks']
     });
 
 })(jQuery);

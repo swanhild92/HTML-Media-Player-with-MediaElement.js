@@ -5,8 +5,7 @@
     "use strict";
 
     $('video, audio').mediaelementplayer({
-        features: ['chromecast', 'playpause', 'progress', 'skipback', 'tracks'],
-        startLanguage: 'en',
+        features: ['playpause', 'volume', 'current', 'progress', 'duration', 'skipback', 'tracks', 'markers', 'contextmenu', 'chromecast', 'fullscreen'],
         skipBackInterval: 10
     });
 

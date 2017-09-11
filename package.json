@@ -3,6 +3,7 @@
   "title": "Media Player with MediaElement.js",
   "license": "MIT",
   "version": "0.1.0",
+  "homepage": "http://mediaplayer.elsdenengelse.nl",
   "author": "Els den Engelse",
   "repository": {
     "type": "git",

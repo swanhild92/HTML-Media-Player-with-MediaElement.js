@@ -15,23 +15,49 @@
 }
 
 .audioWrapper {
-    width: 400px;
+    width: 50%;
+
+    audio {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .mejs__container {
     margin: 0 auto;
+    box-shadow: black 0 0 5px;
 }
 
-.mejs-container{
+.mejs-container,
+.mejs-layers .mejs-layer {
     width: 100% !important;
     height: 100% !important;
 }
 
-.mejs-layers .mejs-layer{
-    width: 100% !important;
-    height: 100% !important;
+.mejs__overlay-button,
+.mejs__overlay-loading {
+    transition: transform 1s linear 1s;
 }
 
-.mejs__overlay-button {
 
+@media screen and (min-width: $small + 1px) and (max-width: $large) {
+    .mejs__overlay-button,
+    .mejs__overlay-loading {
+        transform: scale(.6);
+    }
+
+    .audioWrapper {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: $small) {
+    .mejs__overlay-button,
+    .mejs__overlay-loading {
+        transform: scale(.6);
+    }
+
+    .audioWrapper {
+        width: 100%;
+    }
 }

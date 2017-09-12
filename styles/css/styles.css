@@ -31,18 +31,37 @@ h1, h2 {
     height: 100%; }
 
 .audioWrapper {
-  width: 400px; }
+  width: 50%; }
+  .audioWrapper audio {
+    width: 100%;
+    height: 100%; }
 
 .mejs__container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-shadow: black 0 0 5px; }
 
-.mejs-container {
-  width: 100% !important;
-  height: 100% !important; }
-
+.mejs-container,
 .mejs-layers .mejs-layer {
   width: 100% !important;
   height: 100% !important; }
+
+.mejs__overlay-button,
+.mejs__overlay-loading {
+  transition: transform 1s linear 1s; }
+
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  .mejs__overlay-button,
+  .mejs__overlay-loading {
+    transform: scale(0.6); }
+  .audioWrapper {
+    width: 75%; } }
+
+@media screen and (max-width: 766px) {
+  .mejs__overlay-button,
+  .mejs__overlay-loading {
+    transform: scale(0.6); }
+  .audioWrapper {
+    width: 100%; } }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
